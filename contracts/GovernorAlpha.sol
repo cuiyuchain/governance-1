@@ -146,8 +146,9 @@ contract GovernorAlpha {
         uint endBlock = add256(startBlock, votingPeriod());
 
         proposalCount++;
+        uint proposalId = proposalCount;
         Proposal memory newProposal = Proposal({
-            id: proposalCount,
+            id: proposalId,
             proposer: msg.sender,
             eta: 0,
             targets: targets,
